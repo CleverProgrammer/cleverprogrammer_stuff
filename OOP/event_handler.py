@@ -1,6 +1,7 @@
 import tkinter as tk
 
 
+# Event handler function
 def doorbell(event):
     print("You rang the doorbell!!")
 
