@@ -1,15 +1,17 @@
 import tkinter as tk
 import webbrowser
 
-
 URL = 'https://cleverprogrammer.com'
+
 
 # Event handler function
 def doorbell(event):
     print("You rang the doorbell!!")
 
+
 def open_cp(event):
     webbrowser.open_new_tab(URL)
+
 
 def cp_blog(event):
     webbrowser.open_new_tab(URL + "/blog")
