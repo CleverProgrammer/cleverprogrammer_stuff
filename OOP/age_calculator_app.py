@@ -9,14 +9,9 @@ window.geometry('400x400')
 
 
 class Person:
-    def __init__(self, name, surname, birthdate, address, telephone, email):
+    def __init__(self, name, birthdate):
         self.name = name
-        self.surname = surname
         self.birthdate = birthdate
-
-        self.address = address
-        self.telephone = telephone
-        self.email = email
 
     def age(self):
         today = datetime.date.today()
@@ -27,19 +22,6 @@ class Person:
 
         return age
 
-
-person = Person(
-    "Jane",
-    "Doe",
-    datetime.date(1992, 3, 12),  # year, month, day
-    "No. 12 Short Street, Greenville",
-    "555 456 0987",
-    "jane.doe@example.com"
-)
-
-print(person.name)
-print(person.email)
-print(person.age())
 
 year_label = tk.Label(text="Year")
 year_label.grid(column=0, row=1)
@@ -64,10 +46,9 @@ def calculate_age():
     print(birth_year.get())
     print(birth_month.get())
     print(birth_day.get())
-    qazi = Person('bob', 'qazi', datetime.date(int(birth_year.get()),
-                                               int(birth_month.get()),
-                                               int(birth_day.get())),
-                  'blah', '323', '@gmail.com')
+    qazi = Person('Qazi', datetime.date(int(birth_year.get()),
+                                        int(birth_month.get()),
+                                        int(birth_day.get())))
     print(qazi.age())
     text_answer = tk.Text(master=window, height=20, width=30)
     text_answer.grid(column=1, row=5)
