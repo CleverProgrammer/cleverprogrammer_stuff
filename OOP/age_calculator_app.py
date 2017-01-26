@@ -62,6 +62,5 @@ image.thumbnail((100, 100), Image.ANTIALIAS)
 photo = ImageTk.PhotoImage(image)
 label_image = tk.Label(image=photo)
 label_image.grid(column=1, row=0)
-# print(get_entry())
 
 window.mainloop()
