@@ -13,8 +13,7 @@ class Workers:  # "Workers" is the class name
         self.hometown = hometown
 
 
-ivan = Workers('Ivan,', '28 years,', 'Blueberry Street 36,',
-               'Utopia.')  # "ivan" is the object created from the class "Workers"
+ivan = Workers('Ivan,', '28 years,', 'Blueberry Street 36,', 'Utopia.')  # "ivan" is the object created from the class "Workers"
 josip = Workers('Josip,', '36 years,', 'Yellowlight Street 136,', 'Oz.')
 miro = Workers('Miro,', '38 years,', 'Color Street 1,', 'Dreamland Town.')
 blondie = Workers('Marijana,', '24 years,', 'Strawberry Street 95,', 'Bluetown.')
