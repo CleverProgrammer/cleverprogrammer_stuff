@@ -34,11 +34,17 @@ month_entry.grid(column=1, row=2)
 day_entry = tk.Entry()
 day_entry.grid(column=1, row=3)
 
+
 def calculate_age():
     print(year_entry.get())
     print(month_entry.get())
     print(day_entry.get())
+    qazi = Person('Qazi', datetime.date(int(year_entry.get()),
+                                        int(month_entry.get()),
+                                        int(day_entry.get())))
+    print(qazi.age())
     print("Button was clicked!")
+
 
 calculate_button = tk.Button(text="Calculate Now!", command=calculate_age)
 calculate_button.grid(column=1, row=4)
