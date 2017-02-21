@@ -17,7 +17,7 @@ def cp_print_cp():
     print('Clever Programmer!')
 
 
-def file_save():
+def file_save(event=None):
     # a+ --> add stuff to the end of the file you are writing to
     f = filedialog.asksaveasfile(mode='a+', defaultextension='.txt')
 
@@ -30,12 +30,12 @@ def file_save():
     f.close()
 
 
-def submit_lesson():
-    lesson_details_to_save = str('\n' + str((subject_entry.get(), hours_entry.get(), amount_entry.get())))
+def submit_lesson(event=None):
+    lesson_details_to_save = '{}, {}, {}\n'.format(subject_entry.get(), hours_entry.get(), amount_entry.get())
     notes_text.insert(tk.END, lesson_details_to_save)
 
 
-file_menu.add_command(label="Save As", accelerator='KeyBoard Shortcut',
+file_menu.add_command(label="Save As", accelerator='Ctrl + S',
                       compound=tk.LEFT, image=None, underline=0, command=file_save)
 
 window.config(menu=menubar)
@@ -58,6 +58,12 @@ paid_radio_button = tk.Radiobutton(master=frame_1, text='Yes', variable=paid_tic
 paid_radio_button2 = tk.Radiobutton(master=frame_1, text='No', variable=paid_tick, value=False)
 notes_text = tk.Text(master=frame_1, width=40, height=20)
 submit_button = tk.Button(master=frame_1, text="Submit", command=submit_lesson)
+
+# bind button
+window.bind('<Return>', submit_lesson)
+
+# bind save
+window.bind('<Control-s>', file_save)
 
 # Let's put the labels in a GRID geometry manager!
 subject_label.grid(row=1, column=0, sticky='w')
