@@ -1,3 +1,4 @@
 # Clever Programmer
 ---
-Clever Programmer exercises, notes, solutions, projects... and STUFF!
+Test your Programming skills now! 
+## exercises, notes, solutions, projects... and STUFF!
